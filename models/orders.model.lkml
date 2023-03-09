@@ -11,4 +11,9 @@ datagroup: orders_default_datagroup {
 persist_with: orders_default_datagroup
 
 explore: order_items {
+  join: subscriptions {
+    type: left_outer
+    sql_on:  ${order_items.subscription_id} = ${subscriptions.id};;
+    relationship: many_to_many
+  }
 }

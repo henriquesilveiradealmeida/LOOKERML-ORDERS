@@ -22,4 +22,5 @@ explore: order_items {
     sql_on:  ${subscriptions.id} = ${addresses.subscription_id} ;;
     relationship: many_to_many
   }
+
 }

@@ -23,4 +23,16 @@ explore: order_items {
     relationship: many_to_many
   }
 
+join: users {
+  type:  left_outer
+  sql_on: ${subscriptions.user_id} = ${users.id} ;;
+  relationship: many_to_many
+}
+
+join: order_item_feedbacks {
+  type:  left_outer
+  sql_on: ${order_items.id} = ${order_item_feedbacks.order_item_id};;
+  relationship: many_to_many
+}
+
 }

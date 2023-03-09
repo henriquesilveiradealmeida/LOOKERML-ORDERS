@@ -35,4 +35,21 @@ join: order_item_feedbacks {
   relationship: many_to_many
 }
 
+join: box_plans {
+  type: left_outer
+  sql_on:  ${order_items.id} = ${box_plans.order_item_id} ;;
+  relationship: many_to_many
+}
+
+join: box_plan_items {
+  type: left_outer
+  sql_on: ${box_plans.id} = ${box_plan_items.box_plan_id} ;;
+  relationship: many_to_many
+}
+
+join: products {
+  type: left_outer
+  sql_on: ${box_plan_items.product_id} = ${products.id} ;;
+  relationship: many_to_many
+}
 }

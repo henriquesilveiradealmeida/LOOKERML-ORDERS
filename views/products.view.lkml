@@ -133,7 +133,8 @@ view: products {
       THEN 'Legumes'
     WHEN p.product_classification_id = '33ff5cc8-2df4-418a-90e1-e44ca834c559'
       THEN 'Frutas'
-    ELSE 'Outra' ;;
+    ELSE 'Outra'
+END;;
   }
 
   dimension: status {

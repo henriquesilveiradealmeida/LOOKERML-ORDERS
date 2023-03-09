@@ -46,6 +46,16 @@ view: addresses {
     END ;;
   }
 
+  dimension: zona {
+    type:  string
+    sql:  case
+    when ${geofence_oficial} = '7bfe6eec-5c13-4bc4-b3bd-3caf466a2d62'
+      then 'CENTRO'
+      ELSE 'OUTRO'
+      END;;
+
+  }
+
   dimension: kind {
     type: number
     sql: ${TABLE}."kind" ;;

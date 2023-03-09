@@ -125,13 +125,13 @@ view: products {
   dimension: category_products {
     type: string
     sql: CASE
-    WHEN p.product_classification_id = '90f4b77a-fb4a-47ea-8846-eff19048e825'
+    WHEN ${product_classification_id} = '90f4b77a-fb4a-47ea-8846-eff19048e825'
       THEN 'Verdura'
-    WHEN p.product_classification_id = '7ed72635-194b-4806-bc0a-24aa2e9ca5fa'
+    WHEN ${product_classification_id} = '7ed72635-194b-4806-bc0a-24aa2e9ca5fa'
       THEN 'Tempero'
-    WHEN p.product_classification_id = '62202dce-a21f-408d-a538-6fdc29d567f6'
+    WHEN ${product_classification_id} = '62202dce-a21f-408d-a538-6fdc29d567f6'
       THEN 'Legumes'
-    WHEN p.product_classification_id = '33ff5cc8-2df4-418a-90e1-e44ca834c559'
+    WHEN ${product_classification_id} = '33ff5cc8-2df4-418a-90e1-e44ca834c559'
       THEN 'Frutas'
     ELSE 'Outra'
 END;;

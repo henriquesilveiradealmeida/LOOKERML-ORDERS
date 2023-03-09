@@ -19,7 +19,7 @@ explore: order_items {
 
   join: addresses {
     type:  left_outer
-    sql_on:  ${subscriptions.id} = ${addresses.id} ;;
+    sql_on:  ${subscriptions.id} = ${addresses.subscription_id} ;;
     relationship: many_to_many
   }
 }

@@ -37,6 +37,15 @@ view: addresses {
     sql: ${TABLE}."geofence_id" ;;
   }
 
+  dimension: geofence_oficial {
+    type:  string
+    sql: CASE
+      WHEN ${new_geofence_id} IS NULL
+      THEN ${geofence_id}
+    ELSE ${new_geofence_id}
+    END ;;
+  }
+
   dimension: kind {
     type: number
     sql: ${TABLE}."kind" ;;

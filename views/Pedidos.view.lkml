@@ -8,7 +8,7 @@ view: order_items {
     sql: ${TABLE}."id" ;;
   }
 
-  dimension: amount {
+  dimension: box_amount {
     type: number
     sql: ${TABLE}."amount" ;;
   }
@@ -410,6 +410,12 @@ view: order_items {
   measure: count {
     type: count
     drill_fields: [detail*]
+  }
+
+  measure: sum_box_amout {
+    type: sum
+    sql:${box_amount} ;;
+    value_format_name: "decimal_0"
   }
 
   # ----- Sets of fields for drilling ------

@@ -415,7 +415,7 @@ view: order_items {
   measure: sum_box_amout {
     type: sum
     sql:${box_amount} ;;
-    value_format_name: "decimal_0"
+    value_format_name: decimal_2
   }
 
   # ----- Sets of fields for drilling ------

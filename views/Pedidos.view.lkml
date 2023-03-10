@@ -34,39 +34,6 @@ view: order_items {
     sql: ${TABLE}."created_at" ;;
   }
 
-  dimension_group: deliverd {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."deliverd_at" ;;
-  }
-
-  dimension_group: delivered {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."delivered_at" ;;
-  }
-
-  dimension: delivery_address_id {
-    type: string
-    sql: ${TABLE}."delivery_address_id" ;;
-  }
-
   dimension_group: delivery_date {
     type: time
     timeframes: [

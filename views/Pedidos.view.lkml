@@ -20,12 +20,7 @@ view: order_items {
     sql: ${TABLE}."amount" ;;
   }
 
-  dimension: charge_attempts {
-    type: number
-    sql: ${TABLE}."charge_attempts" ;;
-  }
-
-  dimension_group: created {
+  dimension_group: date_created_order {
     type: time
     timeframes: [
       raw,

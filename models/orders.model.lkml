@@ -52,4 +52,10 @@ join: products {
   sql_on: ${box_plan_items.product_id} = ${products.id} ;;
   relationship: many_to_many
 }
+
+join: my_food_preferences {
+  type: left_outer
+  sql: ${subscriptions.user_id} = ${my_food_preferences.user_id} ;;
+  relationship: many_to_many
+}
 }

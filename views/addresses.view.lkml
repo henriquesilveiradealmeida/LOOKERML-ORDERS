@@ -73,7 +73,7 @@ view: addresses {
 
 dimension: coordenadas {
   type: string
-  sql: concat(${latitude},',',${longitude});;
+  sql: concat(${latitude},'-and-',${longitude});;
 }
 
   dimension: kind {

@@ -62,11 +62,11 @@ view: addresses {
     when ${geofence_oficial} = '90630454-d285-412b-ad36-024486ea501a'
       then 'NORTE-SP'
     when ${geofence_oficial} = 'e7fe0855-e475-41d6-bfb6-4b6b253d17c5'
-      then 'OESTE-MTP-INT'
+      then 'OESTE-MTP-SP'
     when ${geofence_oficial} = '6266822e-9519-4d3c-bfa2-a0f14c90dbd2'
-      then 'ABC-MTP-INT'
+      then 'ABC-MTP-SP'
     when ${geofence_oficial} = '8140860f-5b8d-41e2-9d35-9c07d2f37658'
-      then 'GRL-MTP-INT'
+      then 'GRL-MTP-SP'
       ELSE 'OUTRO'
       END;;
   }

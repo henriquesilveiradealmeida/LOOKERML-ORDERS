@@ -20,7 +20,7 @@ view: order_items {
     sql: ${TABLE}."amount" ;;
   }
 
-  dimension_group: date_created_order {
+  dimension_group: created_order {
     type: time
     timeframes: [
       raw,

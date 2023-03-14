@@ -391,6 +391,14 @@ view: order_items {
     value_format_name: decimal_0
   }
 
+  measure: sum_discount_amount {
+    type: sum
+    sql: ${discount_amount} ;;
+    value_format_name: decimal_0
+  }
+
+
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [

@@ -385,6 +385,12 @@ view: order_items {
     value_format_name: decimal_0
   }
 
+  measure: sum_delivery_fee {
+    type: sum
+    sql: ${delivery_fee_amount} ;;
+    value_format_name: decimal_0
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [

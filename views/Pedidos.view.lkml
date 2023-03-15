@@ -34,7 +34,7 @@ view: order_items {
     sql: ${TABLE}."created_at" ;;
   }
 
-  dimension_group: delivery_date {
+  dimension_group: delivery {
     type: time
     timeframes: [
       raw,
@@ -57,11 +57,6 @@ view: order_items {
   dimension: discount_amount {
     type: number
     sql: ${TABLE}."discount_amount" ;;
-  }
-
-  dimension: discount_reason_option {
-    type: number
-    sql: ${TABLE}."discount_reason_option" ;;
   }
 
   dimension: eggs_trial {

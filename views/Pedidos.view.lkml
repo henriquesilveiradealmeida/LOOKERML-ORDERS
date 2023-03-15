@@ -79,20 +79,26 @@ view: order_items {
     sql: ${TABLE}."free_reason" ;;
   }
 
-  dimension: free_reason_option {
-    type: number
-    sql: ${TABLE}."free_reason_option" ;;
-  }
-
-  dimension: fruits_portion_amount {
+  dimension: fruits_portion {
     type: number
     sql: ${TABLE}."fruits_portion_amount" ;;
   }
 
-  dimension: greens_portion_amount {
+  dimension: greens_portion {
     type: number
     sql: ${TABLE}."greens_portion_amount" ;;
   }
+
+  dimension: spices_portion {
+    type: number
+    sql: ${TABLE}."spices_portion_amount" ;;
+  }
+
+  dimension: vegetables_portion {
+    type: number
+    sql: ${TABLE}."vegetables_portion_amount" ;;
+  }
+
 
   dimension: lobby_delivery {
     type: yesno
@@ -301,10 +307,6 @@ view: order_items {
     sql: ${TABLE}."special_attention_reason" ;;
   }
 
-  dimension: spices_portion_amount {
-    type: number
-    sql: ${TABLE}."spices_portion_amount" ;;
-  }
 
   dimension: stripe_charge_id {
     type: string
@@ -352,11 +354,6 @@ view: order_items {
     sql: ${TABLE}."user_id" ;;
   }
 
-  dimension: vegetables_portion_amount {
-    type: number
-    sql: ${TABLE}."vegetables_portion_amount" ;;
-  }
-
   dimension: voucher_id {
     type: string
     # hidden: yes
@@ -385,14 +382,21 @@ view: order_items {
     sql: ${discount_amount} ;;
     value_format_name: decimal_0
   }
-
-  measure: avg_discount_amount {
+  #calcula o valor de desconto sem considerar os pedidos que não houveram desconto
+  measure: avg_discount_amount_greater_than_zero {
     type: average
     sql: ${discount_amount} ;;
     filters: [discount_amount: ">0"]
     value_format_name: decimal_2
   }
 
+#calculando mensurações das porções
+
+  measure: sum_fruits_portion {
+    type: sum
+    sql: ${fruits_portion} ;;
+    value_format_name: decimal_0
+  }
 
 
   # ----- Sets of fields for drilling ------

@@ -401,7 +401,7 @@ view: order_items {
   measure: avg_fruits_portion {
     type: average
     sql: ${fruits_portion} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_2
   }
 
   # ----- Sets of fields for drilling ------

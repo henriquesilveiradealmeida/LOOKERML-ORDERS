@@ -389,6 +389,7 @@ view: order_items {
   measure: avg_discount_amount {
     type: average
     sql: ${discount_amount} ;;
+    filters: [discount_amount: ">0"]
     value_format_name: decimal_2
   }
 

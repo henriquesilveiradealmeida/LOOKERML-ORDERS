@@ -412,7 +412,7 @@ view: order_items {
 
   measure: avg_greens_portion {
     type: average
-    sql: ${vegetables_portion} ;;
+    sql: ${greens_portion} ;;
     value_format_name: decimal_2
   }
 

@@ -439,7 +439,7 @@ view: order_items {
     sql: ${vegetables_portion} ;;
     value_format_name: decimal_2
   }
-
+ #
 
   # ----- Sets of fields for drilling ------
   set: detail {

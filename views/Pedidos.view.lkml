@@ -54,12 +54,6 @@ view: order_items {
     sql: ${TABLE}."delivery_fee_amount" ;;
   }
 
-  dimension: dependent_id {
-    type: string
-    # hidden: yes
-    sql: ${TABLE}."dependent_id" ;;
-  }
-
   dimension: discount_amount {
     type: number
     sql: ${TABLE}."discount_amount" ;;
@@ -393,6 +387,12 @@ view: order_items {
 
   measure: sum_discount_amount {
     type: sum
+    sql: ${discount_amount} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: avg_discount_amount {
+    type: average
     sql: ${discount_amount} ;;
     value_format_name: decimal_0
   }

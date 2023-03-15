@@ -404,6 +404,43 @@ view: order_items {
     value_format_name: decimal_2
   }
 
+  measure: sum_greens_portion {
+    type: sum
+    sql: ${greens_portion} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: avg_greens_portion {
+    type: average
+    sql: ${vegetables_portion} ;;
+    value_format_name: decimal_2
+  }
+
+  measure: sum_spices_portion {
+    type: sum
+    sql: ${spices_portion} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: avg_spices_portion {
+    type: average
+    sql: ${spices_portion} ;;
+    value_format_name: decimal_2
+  }
+
+  measure: sum_vegetables_portion {
+    type: sum
+    sql: ${vegetables_portion} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: avg_vegetables_portion {
+    type: average
+    sql: ${vegetables_portion} ;;
+    value_format_name: decimal_2
+  }
+
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [

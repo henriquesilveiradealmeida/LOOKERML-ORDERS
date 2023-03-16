@@ -99,20 +99,9 @@ view: order_items {
     sql: ${TABLE}."vegetables_portion_amount" ;;
   }
 
-
-  dimension: lobby_delivery {
-    type: yesno
-    sql: ${TABLE}."lobby_delivery" ;;
-  }
-
   dimension: notes {
     type: string
     sql: ${TABLE}."notes" ;;
-  }
-
-  dimension: omie_sales_order_id {
-    type: number
-    sql: ${TABLE}."omie_sales_order_id" ;;
   }
 
   dimension: order_delivered_number {

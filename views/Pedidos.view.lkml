@@ -110,8 +110,11 @@ view: order_items {
   }
 
   dimension: order_delivery_period {
-    type: number
-    sql: ${TABLE}."order_delivery_period" ;;
+    type: string
+    sql: case
+    when ${TABLE}."order_delivery_period" = 1 THEN 'Manhã'
+    else 'Tarde'
+    end;;
   }
 
   dimension: order_item_issue {

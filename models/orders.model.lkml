@@ -58,4 +58,5 @@ join: my_food_preferences {
   sql: ${subscriptions.user_id} = ${my_food_preferences.user_id} ;;
   relationship: many_to_many
 }
+
 }
